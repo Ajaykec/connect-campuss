@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Change request - ScopeLock</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="change-request">
+<header><a class="brand" href="../index.html">ScopeLock</a><a href="../pages/dashboard.html">Projects</a></header>
+<main>
+<div id="page-msg" role="status"></div>
+<p><a id="back-link" href="#">Back to project</a></p>
+<h1>New change request</h1>
+<form id="change-form" class="card" novalidate>
+  <label for="description">What should change?</label><textarea id="description" rows="3" required></textarea>
+  <label for="reason">Why is it needed?</label><textarea id="reason" rows="2" required></textarea>
+  <label for="estimated_hours">Estimated hours (we calculate cost and days)</label>
+  <input id="estimated_hours" type="number" min="0" step="0.5">
+  <p class="muted">Or leave hours empty and enter the numbers yourself:</p>
+  <label for="estimated_extra_cost">Extra cost (USD)</label><input id="estimated_extra_cost" type="number" min="0" step="0.01">
+  <label for="estimated_additional_days">Additional days</label><input id="estimated_additional_days" type="number" min="0" step="1">
+  <div class="row"><button type="submit">Submit change request</button></div>
+  <div id="form-msg" role="status"></div>
+</form>
+</main>
+<script src="../js/api.js"></script>
+<script src="../js/validation.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

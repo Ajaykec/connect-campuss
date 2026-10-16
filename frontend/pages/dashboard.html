@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects - ScopeLock</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="dashboard">
+<header><a class="brand" href="../index.html">ScopeLock</a><a href="../pages/dashboard.html">Projects</a></header>
+<main>
+<div id="page-msg" role="status"></div>
+<h1>Projects</h1>
+<div id="projects" class="grid"><p class="muted">Loading...</p></div>
+<h2>Create a project</h2>
+<form id="project-form" class="card" novalidate>
+  <label for="project_name">Project name</label><input id="project_name" required>
+  <label for="client_name">Client name</label><input id="client_name" required>
+  <label for="original_scope">Original scope</label><textarea id="original_scope" rows="3" required></textarea>
+  <label for="original_budget">Original budget (USD)</label><input id="original_budget" type="number" min="0" step="0.01" required>
+  <label for="original_deadline">Original deadline</label><input id="original_deadline" type="date" required>
+  <div class="row"><button type="submit">Create project</button></div>
+  <div id="form-msg" role="status"></div>
+</form>
+</main>
+<script src="../js/api.js"></script>
+<script src="../js/validation.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+:root { --ink:#1d2433; --muted:#5d6678; --line:#d9dde5; --bg:#f6f7f9; --card:#fff; --accent:#1f5eff;
+        --ok:#1a7f4b; --bad:#b3261e; --warn:#8a5a00; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, Segoe UI, sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+header { background:var(--ink); color:#fff; padding:12px 24px; display:flex; gap:24px; align-items:center; }
+header a { color:#fff; text-decoration:none; } header .brand { font-weight:700; font-size:1.1rem; }
+main { max-width:960px; margin:24px auto; padding:0 16px; }
+h1 { margin-top:0; } h2 { margin:28px 0 8px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:16px; margin-bottom:12px; }
+.grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:12px; }
+label { display:block; margin:10px 0 2px; font-weight:600; }
+input, textarea { width:100%; padding:8px; border:1px solid var(--line); border-radius:4px; font:inherit; }
+button, .btn { display:inline-block; padding:8px 14px; border:0; border-radius:4px; background:var(--accent); color:#fff;
+               font:inherit; cursor:pointer; text-decoration:none; }
+button.ok { background:var(--ok); } button.bad { background:var(--bad); }
+button:disabled { opacity:.5; cursor:not-allowed; }
+:focus-visible { outline:3px solid #ffb703; outline-offset:2px; }
+.muted { color:var(--muted); } .terms { display:grid; grid-template-columns:auto 1fr; gap:4px 16px; }
+.badge { padding:2px 8px; border-radius:10px; font-size:.8rem; font-weight:600; background:#eee; }
+.badge.pending { background:#fff3cd; color:var(--warn); } .badge.approved { background:#d8f3e3; color:var(--ok); }
+.badge.rejected { background:#fde2e0; color:var(--bad); }
+.msg { padding:10px 14px; border-radius:4px; margin:12px 0; } .msg.error { background:#fde2e0; color:var(--bad); }
+.msg.success { background:#d8f3e3; color:var(--ok); } .field-error { color:var(--bad); font-size:.85rem; }
+.row { display:flex; gap:8px; margin-top:10px; }
